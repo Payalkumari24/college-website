@@ -1,0 +1,269 @@
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7; /* Lighter background for clean look */
+}
+
+/* Header styling */
+header {
+  background: #004aad; /* Solid blue for header */
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header h1 {
+  font-size: 1rem; /* Smaller text for header */
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 1rem;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem; /* Smaller text for nav items */
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #dff4ff; /* Light blue hover effect */
+}
+
+/* Hero Section Styling */
+.hero {
+  height: 100vh; /* Full page height */
+  background-image: url('college.jpg'); /* Background image */
+  background-size: cover; /* Cover the section */
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Overlay for better readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 74, 173, 0.4); /* Soft blue overlay */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.content h2 {
+  font-size: 2rem; /* Smaller text for better proportion */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.content p {
+  font-size: 1rem; /* Smaller text for paragraph */
+  margin-bottom: 1.5rem;
+}
+
+.content img {
+  display: none; /* Hide image to focus on background */
+}
+
+/* Section styling */
+.section {
+  padding: 3rem 1rem; /* Reduced padding for compact layout */
+  text-align: center;
+  background: white;
+  color: #333;
+}
+
+.section:nth-child(even) {
+  background: #e3f4ff; /* Light blue alternate background */
+}
+
+.section h2 {
+  font-size: 2rem; /* Smaller text for section titles */
+  margin-bottom: 1rem;
+  color: #004aad; /* Blue heading */
+}
+
+.section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1rem; /* Smaller text for better readability */
+  font-style:oblique;
+}
+.about img{
+  height: 90px;
+  width: 90px;
+  margin: 2.5%;
+}
+/* Resources section styling */
+.resources {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+  width: calc(100% - 9rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resource {
+  background: white;
+  border: 5px solid #d0e6ff;
+  border-radius: 5px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  max-width: 250px;
+  text-align: center;
+  position: relative; /* To position arrows correctly */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 74, 173, 0.3);
+}
+
+.resource h3 {
+  color: #004aad;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.resource p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.resource .btn {
+  display: inline-block;
+  background: #004aad;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.resource .btn:hover {
+  background: #00337a;
+}
+
+.resource img {
+  height: 250px;
+  width: 250px;
+}
+
+.arrow-left, .arrow-right {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #004aad;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-left {
+  left: -30px; /* Position left arrow */
+}
+
+.arrow-right {
+  right: -30px; /* Position right arrow */
+}
+
+.resource:hover .arrow-left, .resource:hover .arrow-right {
+  color: #00337a; /* Change color on hover */
+}
+
+
+/* Contact section styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #e3f4ff; /* Light blue background for form */
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: none;
+  height: 120px;
+}
+
+form button {
+  background: #004aad;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #00337a;
+}
+
+/* Footer styling */
+footer {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.9rem; /* Smaller text for footer */
+}
